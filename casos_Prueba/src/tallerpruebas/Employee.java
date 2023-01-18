@@ -25,7 +25,7 @@ public class Employee
     }
     //calcula el salario dependiendo del tipo de trabajador 
     //y entrega el décimo correspondiente cada 2 meses
-    public float cs() {
+    public float cs(LocalDate ld) {
         float salario = 0;
         Date date = new Date();
         //Obtiene la hora local
@@ -33,7 +33,7 @@ public class Employee
         localDate = date.toInstant()
                 .atZone(ZoneId.systemDefault()).toLocalDate();
         //Obtiene el mes en forma de entero
-        int month = localDate.getMonthValue();
+        int month = ld.getMonthValue();
         // Si la moneda es USD, se considera todo el salario,
         // caso contrario se resta 5% por cambio de moneda
         if(currency == "USD"){salario = salary; }

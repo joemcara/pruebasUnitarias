@@ -1,5 +1,6 @@
 package tallerpruebas;
 
+import java.time.Clock;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -13,7 +14,7 @@ public class Employee
     //porcentaje de bonus
     private float bonusPercentage;    
     //variable de tipo employeeType
-    private EmployeeType employeeType;    
+    private EmployeeType employeeType;
 
     public Employee(float salary, String currency, 
         float bonusPercentage, EmployeeType employeeType){
